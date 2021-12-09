@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+    font-family: "Poppins", "Times New Roman", Times, serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 768px) {
+	main{
+		display: flex;
+	}
 }
+.header-meta {
+    display: flex;
+    width: 6rem;
+    justify-content: space-between;
+}
+.brand-logo {
+    width: 45%;
+}
+.cart-icon {
+    width: 35px;
+}
+.profile-pic {
+    max-width: 35px;
+    border-radius: 50%;
+}
+.brands-list div{
+    flex-grow: 1;
+    text-align: center;
+}
+.brands-list a{
+    display: block;
+    padding: 1rem 0;
+    width: 100%;
+    color: #ff9901;
+}
+.active-path a{
+    color:#fff;
+    background-color: #ff9901;
+}
+@media screen and (min-width: 768px){
+	.brands-list{
+		width: 20%;
+		padding: 1rem 2rem;
+	}
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+	background-color: #f5f5f5;
+}
+@media screen and (min-width: 768px){
+	nav{
+		flex-direction: column;
+		position: sticky;
+		top: 0;
+	}
+}
+nav a {
+    text-decoration: none;
+}
+@media screen and (min-width: 768px){
+	.all-products{
+		display: flex;
+		flex-wrap: wrap;
+		gap: .5rem;
+		padding: 1rem 0;
+        width: 70%;
+	}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.single-product {
+    display: flex;
+    margin: 0.5rem auto;
+    border: 1px solid #f5f5f5;
+}
+@media screen and (min-width: 768px){
+	.single-product{
+		flex: 1 0 30%;
+		margin: 0;
+	}
+}
+.product-image {
+    width: 40%;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-image img {
+    width: 80%;
+}
+.product-meta {
+    padding: 1rem 0.5rem;
+}
+.product-meta h2 {
+    font-size: 1rem;
+}
+.add-to-cart, .remove-cart-item {
+    background-color: #fff;
+    border: 2px solid #ff9901;
+    color: #ff9901;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    transition: background 0.5s;
+}
+.remove-cart-item{
+    font-size: .7rem;
+}
+.add-to-cart:focus,
+.add-to-cart:hover,
+.remove-cart-item:focus,
+.remove-cart-item:hover {
+    color: #fff;
+    background-color: #ff9901;
+    outline: none;
+}
+.cart-container{
+    width: 60%;
+    position: absolute;
+    top: 4rem;
+    right: 1.5rem;
+    background: #fff;
+    max-width: 300px;
+}
+.cart-item {
+    display: flex;
+    border-bottom: 1px solid #d6c7c7;
+}
+.cart-container.hidden .cart-item{
+    display: none;
+}
+.cart-item .product-image {
+    width: 10rem;
+    max-width: 70px;
+}
+.cart-item .product-meta h2 {
+    font-size: 1rem;
+}
+.cart-item .product-meta p {
+    font-size: 0.7rem;
+}
+.cart-total{
+    position: absolute;
+    padding: 0rem 0.4rem;
+    background: #fff;
+    border-radius: 50%;
+    top: -5rem;
+    right: 5.5rem;
 }
